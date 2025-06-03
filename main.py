@@ -2,9 +2,9 @@ import alumnos
 import profesores
 import cursos
 
-
-
 cursos_validos = ["Programacion", "Calculo", "Administracion", "Ingles", "Estructuras"]
+
+# Función principal que muestra el menú y controla el flujo del programa
 
 def menu():
     while True:
@@ -23,7 +23,7 @@ def menu():
                 nombre=input("Nombre alumno: ")
                 cedula=input("Cedula alumno: ")
                 curso=input("Curso alumno: ")
-                if curso in cursos_validos: 
+                if curso in cursos_validos:  # Se valida que el curso esté en la lista de cursos válidos
                     try:
                          nota = float(input("Nota alumno: "))
                          alumnos.agregar_alumno(nombre, cedula, curso,nota)
@@ -78,7 +78,7 @@ def menu():
 
         elif opcion == '5':
              print("Salida Exitosa")
-
+             break
 
 if __name__ == "__main__":
             menu()
